@@ -14,7 +14,7 @@ class Controller extends BaseController
 
     public function saveImage($image, $path = 'public')
     {
-        if($image)
+        if(!$image)
         {
             return null;
         }

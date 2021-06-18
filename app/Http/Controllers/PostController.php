@@ -37,7 +37,7 @@ class PostController extends Controller
             'body' => 'required|string'
         ]);
 
-        $image = $this->saveImage($request->$image, 'posts');
+        $image = $this->saveImage($request->image, 'posts');
 
         $post = Post::create([
             'body' => $attrs['body'],
@@ -49,7 +49,7 @@ class PostController extends Controller
 
         return response([
             'message' => 'Post created.',
-            'post' => $post
+            'post' => $post,
         ], 200);
     }
 
